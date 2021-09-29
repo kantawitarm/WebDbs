@@ -1,5 +1,5 @@
 # การimport เพิ่มเติม
-เพิ่ม lib canvasjs สำหรับตารางใน src/lib
+เพิ่ม lib canvasjs สำหรับตารางใน src/lib [https://canvasjs.com/docs/charts/integration/react/]
 ### ======================================================================================================
 
 # Getting Started with Create React App
