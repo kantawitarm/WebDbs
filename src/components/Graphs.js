@@ -8,27 +8,28 @@ const Graphs = () => {
 
     const options = {
         title: {
-          text: "Basic Column Chart in React"
+            text: "Basic Column Chart in React"
         },
-        data: [{				
-                  type: "column",
-                  dataPoints: [
-                      { label: "Apple",  y: 10  },
-                      { label: "Orange", y: 15  },
-                      { label: "Banana", y: 25  },
-                      { label: "Mango",  y: 30  },
-                      { label: "Grape",  y: 28  }
-                  ]
-         }]
-     }
+        data: [{
+            type: "column",
+            dataPoints: [
+                { label: "Apple", y: 10 },
+                { label: "Orange", y: 15 },
+                { label: "Banana", y: 25 },
+                { label: "Mango", y: 30 },
+                { label: "Grape", y: 28 }
+            ]
+        }]
+    }
 
 
     return (
-        <div>
-        <CanvasJSChart options = {options}
-            /* onRef = {ref => this.chart = ref} */
-        />
-      </div>
+
+            <div style={{ width: "300px", margin: "30px"}}>
+                <CanvasJSChart options={options}
+                /* onRef = {ref => this.chart = ref} */
+                />
+            </div>
     )
 }
 
