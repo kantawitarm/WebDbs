@@ -10,7 +10,7 @@ import MyNavbar from './components/MyNavbar';
 //Arm section
 function App() {
   return (
-    <div className="App">
+    <div style={{textAlign: "center"}} className="Home-Back"> {/* ต้อง กำหนดค่า กึ่งกลางที่ตัวใหญ่ ตัวคลุม */}
     <MyNavbar/>
     <Button variant="primary">Button #1</Button>
 
