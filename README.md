@@ -1,5 +1,11 @@
+# Trick ต่างๆ
+shortcut และอื่นๆ [https://code.visualstudio.com/docs/editor/codebasics]
+ข้อมูลตกแต่ง reatjs+ bootstrap[https://react-bootstrap.netlify.app/components/buttons/?#buttons]
 # การimport เพิ่มเติม
 เพิ่ม lib canvasjs สำหรับตารางใน src/lib [https://canvasjs.com/docs/charts/integration/react/]
+
+
+
 ### ======================================================================================================
 
 # Getting Started with Create React App
