@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { render } from "react-dom";
-import CanvasJSReact from "../lib/canvasjs-3.4.2/canvasjs.react";//"./canvasjs.react";
+import CanvasJSReact from "../../lib/canvasjs-3.4.2/canvasjs.react";//"./canvasjs.react";
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 const Graphs = () => {
@@ -25,7 +25,7 @@ const Graphs = () => {
 
     return (
 
-            <div style={{ width: "300px", margin: "30px"}}>
+            <div style={{ width: "300px", margin: "30px", flex:1}}>
                 <CanvasJSChart options={options}
                 /* onRef = {ref => this.chart = ref} */
                 />

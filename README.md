@@ -1,8 +1,13 @@
 # Trick ต่างๆ
 shortcut และอื่นๆ [https://code.visualstudio.com/docs/editor/codebasics]
 ข้อมูลตกแต่ง reatjs+ bootstrap[https://react-bootstrap.netlify.app/components/buttons/?#buttons]
+เอาข้อมูลที่ไม่ใช้ ออก $ rm src/logo.svg src/App.test.js
+สร้างใหม่ ใช้ ley ลัด rafce
+format [On Mac] Shift + Option + F, [On Windows] Shift + Alt + F
 # การimport เพิ่มเติม
 เพิ่ม lib canvasjs สำหรับตารางใน src/lib [https://canvasjs.com/docs/charts/integration/react/]
+
+npm install -S react-router-bootstrap
 
 
 
