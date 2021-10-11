@@ -1,8 +1,6 @@
 import React from 'react'
 
 import { Nav, Navbar, NavDropdown, Container, Form, FormControl, Button } from 'react-bootstrap';
-import { LinkContainer } from "react-router-bootstrap";
-
 
 //href="#action/3.1"  href="#home"
 const MyNavbar = () => {
