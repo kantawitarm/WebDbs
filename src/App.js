@@ -1,24 +1,31 @@
 import './App.css';
-
-import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 //import file
 import MyNavbar from './components/MyNavbar';
 
+// import { BrowserRouter, Router } from 'react-router-dom'
 
-import Routes from "./components/Routes";
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+
+import Home from "./pages/Home/Home"
+import Test from "./pages/Test/Test"
 
 //Arm section
 function App() {
   return (
-    <div style={{textAlign: "center"}} className="Home-Back"> {/* ต้อง กำหนดค่า กึ่งกลางที่ตัวใหญ่ ตัวคลุม */}
-    <MyNavbar/>
-    <Routes />
-    {/* <Graphs/>
-    <Button variant="primary">Button #1</Button> */}
+    <Router>
+      <div style={{ textAlign: "center" }} className="Home-Back"> {/* ต้อง กำหนดค่า กึ่งกลางที่ตัวใหญ่ ตัวคลุม */}
+        <MyNavbar />
 
-    </div>
+        <Switch>
+                <Route path="/" component={Home} exact/>
+                <Route path="/test" component={Test} exact/>
+
+        </Switch>
+
+      </div>
+    </Router>
 
   );
 }

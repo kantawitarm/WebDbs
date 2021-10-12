@@ -2,23 +2,41 @@ import React from 'react'
 
 import { Nav, Navbar, NavDropdown, Container, Form, FormControl, Button } from 'react-bootstrap';
 
+import { useState } from 'react'
+
+import { Link } from 'react-router-dom'
+
 //href="#action/3.1"  href="#home"
 const MyNavbar = () => {
+
+    const [text, setText] = useState('')
+    const onSubmit = (e) => {
+        console.log("Testtt")
+        if (!text) {
+            alert('Please add a task')
+            return
+          }
+          else{
+            alert(text)
+          }
+        
+        setText('')
+    }
+
     return (
         <div>
             <Navbar bg="light" expand="lg">
                 <Container>
 
-                    <Navbar.Brand href="/">Web-Db</Navbar.Brand>
-
+                    <Navbar.Brand  as={Link} to="/">Web-Db</Navbar.Brand>
 
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
 
-                            <Nav.Link href="/">Home</Nav.Link>
+                            <Nav.Link as={Link} to="/">Home</Nav.Link>
 
-                            <Nav.Link href="/test">Link</Nav.Link>
+                            <Nav.Link as={Link} to="/test">Link</Nav.Link>
 
                             {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                                 <NavDropdown.Item to="{path: '/'}">Action</NavDropdown.Item>
@@ -35,9 +53,13 @@ const MyNavbar = () => {
                                 placeholder="Search"
                                 className="me-2"
                                 aria-label="Search"
+
+                                onChange={(e) => setText(e.target.value)}
+                               
                             />
-                            <Button variant="outline-secondary">Search</Button>
+                            <Button onClick={onSubmit} variant="outline-secondary">Search</Button>
                         </Form>
+
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
