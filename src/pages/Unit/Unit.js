@@ -1,6 +1,6 @@
 import React from 'react';
 
-import dataJson from "../../Tempdata/blogs_0000012.json";
+import dataJson from "../../Tempdata/blogs_0000001.json";
 import pic404 from "../../image/pic_404.png"
 import Graphs from './Graphs';
 
@@ -19,7 +19,7 @@ const Unit = (props) => {
     const onclick = () => {
 
         var coll = document.getElementsByClassName("collapsible");
-        var i;
+        // var i;
 
         // coll[0].classList.toggle("active");
         //     var content = coll[0].nextElementSibling;
@@ -28,9 +28,10 @@ const Unit = (props) => {
         //     } else {
         //     content.style.display = "block";
         //     }
-
+        
         coll[0].classList.toggle("active");
         var content = coll[0].nextElementSibling;
+        console.log(content.scrollHeight)
         if (content.style.maxHeight) {
             content.style.maxHeight = null;
         } else {
@@ -79,23 +80,18 @@ const Unit = (props) => {
                     <p style={{position:'absolute'}} >published</p>
                     <p style ={{marginTop: '10%'}}> {dataJson.thread.published.split("T")[0]} </p>
 
+                    <a href={dataJson.thread.url}> link </a>
+
                 </div>
 
             </div>
 
             <div>
-                {
-                    <a href={dataJson.thread.url}> link </a>
-                }
-            </div>
-            <div>
-                <button type="button" class="collapsible" onClick={onclick}>Open Text</button>
-                <div class="content">
+                <button type="button" className="collapsible" onClick={onclick}>Open Text</button>
+                <div className="content">
                     <p>{dataJson.text}</p>
 
                 </div>
-
-
             </div>
 
         </div>

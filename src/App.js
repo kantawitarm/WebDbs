@@ -14,9 +14,8 @@ import Unit from "./pages/Unit/Unit"
 import React, {useState, useEffect, Component} from 'react';
 
 //Arm section
-class App extends Component {
+function App() {
 
-  render() {
   return (
     <Router>
       <div style={{ textAlign: "center" }} className="Home-Back"> {/* ต้อง กำหนดค่า กึ่งกลางที่ตัวใหญ่ ตัวคลุม */}
@@ -32,7 +31,7 @@ class App extends Component {
     </Router>
 
   );
-  }
+  
 }
 
 export default App;

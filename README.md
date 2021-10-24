@@ -4,10 +4,14 @@ shortcut และอื่นๆ [https://code.visualstudio.com/docs/editor/cod
 เอาข้อมูลที่ไม่ใช้ ออก $ rm src/logo.svg src/App.test.js
 สร้างใหม่ ใช้ ley ลัด rafce
 format [On Mac] Shift + Option + F, [On Windows] Shift + Alt + F
+
+key ลัดสร้างโครง พื้นฐาน => rafce
 # การimport เพิ่มเติม
 เพิ่ม lib canvasjs สำหรับตารางใน src/lib [https://canvasjs.com/docs/charts/integration/react/]
 
 npm install -S react-router-bootstrap
+
+
 
 
 
