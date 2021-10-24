@@ -9,10 +9,14 @@ import MyNavbar from './components/MyNavbar';
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 import Home from "./pages/Home/Home"
-import Test from "./pages/Test/Test"
+import Unit from "./pages/Unit/Unit"
+
+import React, {useState, useEffect, Component} from 'react';
 
 //Arm section
-function App() {
+class App extends Component {
+
+  render() {
   return (
     <Router>
       <div style={{ textAlign: "center" }} className="Home-Back"> {/* ต้อง กำหนดค่า กึ่งกลางที่ตัวใหญ่ ตัวคลุม */}
@@ -20,7 +24,7 @@ function App() {
 
         <Switch>
                 <Route path="/" component={Home} exact/>
-                <Route path="/test" component={Test} exact/>
+                <Route path="/Unit" component={Unit} exact/>
 
         </Switch>
 
@@ -28,6 +32,7 @@ function App() {
     </Router>
 
   );
+  }
 }
 
 export default App;
