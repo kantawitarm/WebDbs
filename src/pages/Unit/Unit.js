@@ -2,7 +2,7 @@ import React from 'react';
 
 import dataJson from "../../Tempdata/blogs_0000001.json";
 import pic404 from "../../image/pic_404.png"
-import Graphs from './Graphs';
+// import Graphs from './Graphs';
 
 import './Unit.css'
 
@@ -71,16 +71,19 @@ const Unit = (props) => {
                 </div>
 
                 <div className="container-DetailPic-unit">
-                    <p style={{position:'absolute'}}>uuid: </p>
-                    <p style = {{fontSize: '80%', marginTop: '9%'}}>{dataJson.uuid}</p>
+                    <p style={{position:'absolute'}}>UUID: </p>
+                    <p style = {{fontSize: '80%', marginTop: '12%', textAlign: 'center'}}>{dataJson.uuid}</p>
 
                     <p style = {{position:'absolute'}}>country: </p>
-                    <p style ={{marginTop: '9%'}}> {dataJson.thread.country} </p>
+                    <p style ={{marginTop: '11%', textAlign: 'center'}}> {dataJson.thread.country} </p>
 
                     <p style={{position:'absolute'}} >published</p>
-                    <p style ={{marginTop: '10%'}}> {dataJson.thread.published.split("T")[0]} </p>
+                    <p style ={{marginTop: '12%', textAlign: 'center'}}> {dataJson.thread.published.split("T")[0]} </p>
+                    
+                    <div style={{marginTop: '12%', textAlign: 'center'}}>
+                        <a href={dataJson.thread.url}> link </a>
 
-                    <a href={dataJson.thread.url}> link </a>
+                    </div>
 
                 </div>
 

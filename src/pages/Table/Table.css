@@ -1,0 +1,26 @@
+.container-Header-text{
+    /* margin-top: 2%;
+    margin-left: 2%; */
+    margin-top: 3%;
+    text-align: center;
+
+}
+
+.container-table{
+    margin-left: 5%;
+    margin-right: 5%;
+    /* margin-top: 5%; */
+
+}
+
+.container-Font{
+    /* color: black; */
+    text-align: center;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background-color:wheat;
+    transition: all 2s;
+  }
+
+

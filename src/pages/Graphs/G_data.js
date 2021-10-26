@@ -10,6 +10,7 @@ const Graphs = () => {
         title: {
             text: "Basic Column Chart in React"
         },
+        
         data: [{
             type: "column",
             dataPoints: [

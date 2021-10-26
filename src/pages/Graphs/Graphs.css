@@ -1,0 +1,21 @@
+.container-Graphs{
+    padding: 3%;
+    /* width: 100%;
+    height: 100%; */
+    /* width: 100vh; */
+    /* background-color: turquoise; */
+    /* background-color: turquoise; */
+}
+
+.container-Graph{
+    /* width: 100vh;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: turquoise;
+  vertical-align: baseline;
+}

@@ -11,6 +11,12 @@ key ลัดสร้างโครง พื้นฐาน => rafce
 
 npm install -S react-router-bootstrap
 
+npm install react-bootstrap-table-next --save
+
+---- สำหรับ table ------
+npm install react-bootstrap-table-next --save 
+npm install react-bootstrap-table2-paginator --save
+npm install react-bootstrap-table2-filter --save
 
 
 
