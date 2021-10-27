@@ -36,7 +36,20 @@ export default class Table extends React.Component{
         // console.log(data)
         await this.setState({ dataGraph: data, loading: false });
       }
-      
+
+      generateDataPoints = (G_data) => {
+        var dps = [];
+        if (!this.state.loading) {
+
+            // console.log('[  G_log   ]' + G_data[0][1].date.split('T')[0])
+            for (var i = 0; i < Object.keys(G_data[0]).length; i++) {
+                dps.push({ x: new Date(G_data[0][i].date), y: G_data[0][i].unit })
+            }
+
+        }
+
+        return dps;
+    }
 
 
     render(){
