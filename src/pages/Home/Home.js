@@ -1,6 +1,4 @@
-import Button from '@restart/ui/esm/Button';
-import { React, View } from 'react'
-import { Form } from 'react-bootstrap';
+import { React } from 'react'
 
 import './Home.css'
 

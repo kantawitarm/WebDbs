@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Component } from 'react'
+import React from 'react'
 
 import CanvasJSReact from "../../lib/canvasjs-3.4.2/canvasjs.react";
 
@@ -86,6 +86,7 @@ export default class G_YearPerUnit extends React.Component {
     render() {
 
         const options = {
+            exportEnabled: true,
             theme: "light2", // "light1", "dark1", "dark2"
             animationEnabled: true,
             zoomEnabled: true,

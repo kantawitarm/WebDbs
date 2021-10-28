@@ -2,7 +2,7 @@ import React, { CSSProperties } from 'react'
 
 import { Nav, Navbar, NavDropdown, Container, Form, FormControl, Button } from 'react-bootstrap';
 
-import { useState } from 'react'
+// import { useState } from 'react'
 
 import { Link } from 'react-router-dom'
 
@@ -18,13 +18,14 @@ export default class MyNavbar extends React.Component {
     state = {
         text: null,
         // selectedValue: {},
-        selectedOption: null,
-        recipes: []
+        
+        // selectedOption: null,
+        // recipes: []
     }
 
     constructor() {
         super();
-        this.testFunc = this.testFunc.bind(this);
+        // this.testFunc = this.testFunc.bind(this);
     }
 
     // componentDidMount() {
@@ -65,43 +66,41 @@ export default class MyNavbar extends React.Component {
     //     return dps;
     // }
 
-    testFunc = async (search) => {
-        console.log('test')
-        this.setState({ text: search })
+    // testFunc = async (search) => {
+    //     console.log('test')
+    //     this.setState({ text: search })
 
-        const recipeUrl = 'http://localhost:4000/search';
-        const postBody = {
-            keyword: search
-        };
-        const requestMetadata = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(postBody)
-        };
+    //     const recipeUrl = 'http://localhost:4000/search';
+    //     const postBody = {
+    //         keyword: search
+    //     };
+    //     const requestMetadata = {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(postBody)
+    //     };
 
-        await fetch(recipeUrl, requestMetadata)
-            .then(res => res.json())
-            .then(recipes => {
-                this.setState({ recipes: recipes, errorMessage: null });
-                // console.log(recipes)
-            })
-            .catch(error => {
-                this.setState({ errorMessage: error.toString() });
-                console.error('There was an error!', error);
-            })
-            ;
-
-
-        if (this.state.errorMessage == null &&this.state.recipes != null && (this.state.recipes[0]).length)
-            console.log(this.state.recipes[0][0].title)
-        else
-            console.log('SADdddd')
+    //     await fetch(recipeUrl, requestMetadata)
+    //         .then(res => res.json())
+    //         .then(recipes => {
+    //             this.setState({ recipes: recipes, errorMessage: null });
+    //             // console.log(recipes)
+    //         })
+    //         .catch(error => {
+    //             this.setState({ errorMessage: error.toString() });
+    //             console.error('There was an error!', error);
+    //         })
+    //         ;
 
 
+    //     if (this.state.errorMessage == null &&this.state.recipes != null && (this.state.recipes[0]).length)
+    //         console.log(this.state.recipes[0][0].title)
+    //     else
+    //         console.log('SADdddd')
 
-    }
+    // }
 
     // handleChange = selectedOption => {
     //     this.setState({ selectedOption });
@@ -176,13 +175,13 @@ export default class MyNavbar extends React.Component {
 
                                 <Nav.Link as={Link} to="/Table">Table</Nav.Link>
 
-                                {/* <NavDropdown title="Country" id="basic-nav-dropdown">
-                                    <NavDropdown.Item as={Link} to="/Country-US">US</NavDropdown.Item>
-                                    <NavDropdown.Item as={Link} to="/Country-US">Another action</NavDropdown.Item>
-                                    <NavDropdown.Item as={Link} to="/Country-US">Something</NavDropdown.Item>
+                                <NavDropdown title="other" id="basic-nav-dropdown">
+                                    <NavDropdown.Item href="https://webhose.io/datasets/" >Reference</NavDropdown.Item>
                                     <NavDropdown.Divider />
-                                    <NavDropdown.Item as={Link} to="/Unit">Test Unit</NavDropdown.Item>
-                                </NavDropdown> */}
+                                    <NavDropdown.Item as={Link} to="/Madeby">Made By</NavDropdown.Item>
+                                    {/* <NavDropdown.Item as={Link} to="/Country-US">Something</NavDropdown.Item>     
+                                    <NavDropdown.Item as={Link} to="/Unit">Test Unit</NavDropdown.Item> */}
+                                </NavDropdown>
 
                             </Nav>
 
@@ -199,18 +198,18 @@ export default class MyNavbar extends React.Component {
                             </Form> */}
 
 
-                            <Form className="d-flex">
+                            {/* <Form className="d-flex"> */}
 
-                            {/* <Autocomplete
+                                {/* <Autocomplete
                                 disablePortal
                                 id="combo-box-demo"
                                 options={[{ label: 'The Godfather', id: 1 },]}
                                 sx={{ width: 300 }}
                                 onChange={(e) => console.log(e.target.value)}
-                                renderInput={(params) => <TextField {...params} label="Search" />} */}
-{/* /> */}
+                                renderInput={(params) => <TextField {...params} label="Search" />}
+                                /> */}
     
-                                <FormControl
+                                {/* <FormControl
                                     type="search"
                                     placeholder="Search"
                                     className="me-2"
@@ -220,7 +219,7 @@ export default class MyNavbar extends React.Component {
                                    
                                 />
                                 <Button onClick={onSubmit} variant="outline-secondary">Search</Button>
-                            </Form>
+                            </Form> */}
     
                         </Navbar.Collapse>
                     </Container>
