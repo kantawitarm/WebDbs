@@ -10,8 +10,9 @@ import Home from "./pages/Home/Home"
 import Unit from "./pages/Unit/Unit"
 import Graphs from './pages/Graphs/Graphs';
 import Table from './pages/Table/Table';
+import MadeBy from './pages/MadeBy/MadeBy';
 
-import React, {useState, useEffect, Component} from 'react';
+import React from 'react';
 
 //Arm section
 function App() {
@@ -56,6 +57,7 @@ function App() {
 
                 <Route path="/Graphs" component={Graphs} exact/>
                 <Route path="/Table" component={Table} exact/>
+                <Route path="/MadeBy" component={MadeBy} exact/>
           </div>
         </Switch>
 

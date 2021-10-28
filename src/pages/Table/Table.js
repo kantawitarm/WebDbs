@@ -16,8 +16,6 @@ import paginationFactory, {
 import filterFactory, { textFilter } from 'react-bootstrap-table2-filter';
 import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit';
 
-import { useHistory } from "react-router-dom";
-
 import Lottie from "react-lottie";
 
 import './Table.css'

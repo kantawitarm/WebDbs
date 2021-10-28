@@ -5,17 +5,23 @@ import G_DatePerUnit from './G_DatePerUnit'
 
 import './Graphs.css'
 
+import Piechart from './Piechart'
+
 
 
 export default class Graph extends React.Component{
     
 
     render(){
+        
         return (
             <div className='container-Graphs'>
     
                 <div className='container-Graph'>
-                    <G_DatePerUnit />
+                    <G_DatePerUnit/>
+                </div>
+                <div>
+                    <Piechart/>
                 </div>
     
                 {/* <div className="d-flex flex-row">
