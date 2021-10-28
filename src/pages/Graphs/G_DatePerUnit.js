@@ -55,7 +55,6 @@ export default class G_YearPerUnit extends React.Component {
                 const error = (data && data.message) || response.statusText;
                 return Promise.reject(error);
             }
-            console.log(data.total)
             this.setState({ dataGraph: data, errorMessage: null })
             setTimeout(() => {
                         this.setState({ success: true });

@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^12.8.3",
     "@vlsergey/react-bootstrap-pagetable": "^0.36.1",
     "autocomplete": "0.0.1",
+    "axios": "^0.24.0",
     "bootstrap": "^5.1.1",
     "canvasjs": "^1.8.3",
     "canvasjs-react-charts": "^1.0.5",

@@ -48,7 +48,12 @@ function App() {
         <Switch>
           <div style ={{position: 'static'}}>
                 <Route path="/" component={Home} exact/>
+
                 <Route path="/Unit/:id" component={Unit} exact/>
+                {/* <Route exact path="/post/:id" render={({match}) => (
+                    <Unit match ={window.location.pathname} />
+                  )} /> */}
+
                 <Route path="/Graphs" component={Graphs} exact/>
                 <Route path="/Table" component={Table} exact/>
           </div>

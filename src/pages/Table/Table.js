@@ -25,6 +25,10 @@ import './Table.css'
 import * as loadingData from "../LoadingAnimation/loading.json";
 import * as successData from "../LoadingAnimation/success.json";
 
+import {withRouter} from 'react-router-dom';
+
+// const SomeComponent = withRouter(props => <MyComponent {...props}/>);
+
 const defaultLoading = {
     loop: true,
     autoplay: true,
@@ -71,7 +75,6 @@ export default class Table extends React.Component {
                 const error = (data && data.message) || response.statusText;
                 return Promise.reject(error);
             }
-            console.log(data.total)
             this.setState({ dataTable: data, errorMessage: null })
             setTimeout(() => {
                         this.setState({ success: true });
@@ -106,7 +109,7 @@ export default class Table extends React.Component {
                 // console.log(Table_data[0][i].title)
                 dps.push({
                     'id': i + 1, 'uuid': Table_data[0][i].uuid,'title': Table_data[0][i].title, 'country': Table_data[0][i].country,
-                    'type': Table_data[0][i].type, 'published': Table_data[0][1].published.split('T')[0]
+                    'type': Table_data[0][i].type, 'published': Table_data[0][i].published.split('T')[0]
                 })
             }
 
@@ -155,33 +158,28 @@ export default class Table extends React.Component {
         const columns = [{
             dataField: 'id',
             text: '',
-            // sort: true,
+            sort: true,
             // filter: textFilter()
         },{
             dataField: 'uuid',
             text: 'uuid',
-            // sort: true,
-            // filter: textFilter()
+            sort: true,
         },{
             dataField: 'title',
             text: 'title',
-            // sort: true,
-            // filter: textFilter()
+            sort: true,
         }, {
             dataField: 'country',
             text: 'country',
-            // sort: true,
-            // filter: textFilter()
+            sort: true,
         }, {
             dataField: 'type',
             text: 'type',
-            // sort: true,
-            // filter: textFilter()
+            sort: true,
         }, {
             dataField: 'published',
             text: 'published',
-            // sort: true,
-            // filter: textFilter()
+            sort: true,
         }
         ]
 
@@ -217,11 +215,14 @@ export default class Table extends React.Component {
             onClick: (e, row, rowIndex) => {
                 
               console.log(row.uuid)
+            //   console.log(this.props.location.href);
+              window.location.href = '/Unit/'+row.uuid;
             //   history.push("/path");
             }
           };
 
         const { SearchBar, ClearSearchButton } = Search;
+
 
         return (
             <div>
@@ -257,6 +258,9 @@ export default class Table extends React.Component {
                                     data= {this.getDataTable(this.state.dataTable)}//{dataTemp}//
                                     columns={columns}
                                     search
+
+                                    filter={filterFactory()}
+                                    
                                 >
                                     {
                                         props => (
@@ -266,15 +270,16 @@ export default class Table extends React.Component {
 
                                             
                                             <BootstrapTable classes='container-Font'
-                                                striped // ตัวกำหนด สี สลับ ใน row
-                                                hover // ตัว กำหนด ตอนชี้ เปลี่ยนสี พื้นหลัง
-                                                keyField='id'
-                                                filter={filterFactory()}
-                                                pagination={pagination}
-                                                bootstrap4={true}
+                  
                                                 // selectRow={ { mode: 'checkbox', clickToSelect: true } }
                                                 // data={dataTemp} //this.getDataTable(this.state.dataTable)
                                                 {...props.baseProps}
+
+                                                striped // ตัวกำหนด สี สลับ ใน row
+                                                hover // ตัว กำหนด ตอนชี้ เปลี่ยนสี พื้นหลัง
+                                                // keyField='id'
+                                                pagination={pagination}
+                                                bootstrap4={true}
                                                 columns={columns}
                                                 rowEvents={ rowEvents }
                                             // defaultSorted={defaultSortedBy}

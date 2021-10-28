@@ -176,13 +176,13 @@ export default class MyNavbar extends React.Component {
 
                                 <Nav.Link as={Link} to="/Table">Table</Nav.Link>
 
-                                <NavDropdown title="Country" id="basic-nav-dropdown">
+                                {/* <NavDropdown title="Country" id="basic-nav-dropdown">
                                     <NavDropdown.Item as={Link} to="/Country-US">US</NavDropdown.Item>
                                     <NavDropdown.Item as={Link} to="/Country-US">Another action</NavDropdown.Item>
                                     <NavDropdown.Item as={Link} to="/Country-US">Something</NavDropdown.Item>
                                     <NavDropdown.Divider />
                                     <NavDropdown.Item as={Link} to="/Unit">Test Unit</NavDropdown.Item>
-                                </NavDropdown>
+                                </NavDropdown> */}
 
                             </Nav>
 
