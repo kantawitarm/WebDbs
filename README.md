@@ -13,6 +13,14 @@ npm install -S react-router-bootstrap
 
 npm install react-bootstrap-table-next --save
 
+npm i autocomplete
+npm install @material-ui/lab
+npm install @material-ui/core
+
+ตกแต่ง
+npm i react-lottie
+
+
 ---- สำหรับ table ------
 npm install react-bootstrap-table-next --save 
 npm install react-bootstrap-table2-paginator --save

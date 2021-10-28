@@ -22,7 +22,7 @@
 
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
     background-color:wheat;
-    transition: all 2s;
+    transition: all 1s;
   }
 
 

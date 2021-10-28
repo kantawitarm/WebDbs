@@ -15,25 +15,27 @@ import React, {useState, useEffect, Component} from 'react';
 
 //Arm section
 function App() {
-  const [dataGraph, setDataGraph] = useState([])
+  // const [dataGraph, setDataGraph] = useState([])
 
-  useEffect(() => {
-    const getDateGraph= async () => {
-      const dateGraphFromServer = await fetchDateGraph()
-      setDataGraph(dateGraphFromServer)
-    }
+  
 
-    getDateGraph()
-  }, [])
+  // useEffect(() => {
+  //   const getDateGraph= async () => {
+  //     const dateGraphFromServer = await fetchDateGraph()
+  //     setDataGraph(dateGraphFromServer)
+  //   }
+
+  //   getDateGraph()
+  // }, [])
 
     // Fetch Tasks
-    const fetchDateGraph = async () => {
-        const res = await fetch('http://localhost:4000/Graph')
-        const data = await res.json()
-        console.log(typeof(data[0][0]))
-        // console.log()
-        return data
-    }
+    // const fetchDateGraph = async () => {
+    //     const res = await fetch('http://localhost:4000/Graph')
+    //     const data = await res.json()
+    //     console.log(typeof(data[0][0]))
+    //     // console.log()
+    //     return data
+    // }
 
 
 
@@ -46,7 +48,7 @@ function App() {
         <Switch>
           <div style ={{position: 'static'}}>
                 <Route path="/" component={Home} exact/>
-                <Route path="/Unit" component={Unit} exact/>
+                <Route path="/Unit/:id" component={Unit} exact/>
                 <Route path="/Graphs" component={Graphs} exact/>
                 <Route path="/Table" component={Table} exact/>
           </div>

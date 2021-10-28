@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Graphs from './G_data'
+// import Graphs from './G_data'
 import G_DatePerUnit from './G_DatePerUnit'
 
 import './Graphs.css'

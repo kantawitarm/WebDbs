@@ -1,9 +1,35 @@
 import React, { useState, useEffect, Component } from 'react'
 
 import CanvasJSReact from "../../lib/canvasjs-3.4.2/canvasjs.react";
+
+import Lottie from "react-lottie";
+import * as loadingData from "../LoadingAnimation/loading.json";
+import * as successData from "../LoadingAnimation/success.json";
+
+
+
+
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
-// const G_YearPerUnit = (dataGraph) => {
+const defaultLoading = {
+    loop: true,
+    autoplay: true,
+    animationData: loadingData.default,
+    rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice"
+    }
+};
+
+const defaultSuccess = {
+    loop: true,
+    autoplay: true,
+    animationData: successData.default,
+    rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice"
+    }
+};
+
+
 export default class G_YearPerUnit extends React.Component {
 
     constructor() {
@@ -12,21 +38,40 @@ export default class G_YearPerUnit extends React.Component {
     }
 
     state = {
+        success: false,
         loading: true,
         dataGraph: null,
     }
 
     async componentDidMount() {
-        const url = "http://localhost:4000/graph";
-        const response = await fetch(url);
-        const data = await response.json();
-        // console.log(data)
-        await this.setState({ dataGraph: data, loading: false });
+
+        fetch("http://localhost:4000/graph")
+        .then(async response => {
+            const data = await response.json();
+            this.setState({loading:false})
+            // check for error response
+            if (!response.ok) {
+                // get error message from body or default to response statusText
+                const error = (data && data.message) || response.statusText;
+                return Promise.reject(error);
+            }
+            console.log(data.total)
+            this.setState({ dataGraph: data, errorMessage: null })
+            setTimeout(() => {
+                        this.setState({ success: true });
+                    }, 1000); 
+            
+        })
+        .catch(error => {
+            this.setState({ errorMessage: error.toString() });
+            console.error('There was an error!', error);
+        });
+        
     }
 
     generateDataPoints = (G_data) => {
         var dps = [];
-        if (!this.state.loading) {
+        if (this.state.success) {
 
             // console.log('[  G_log   ]' + G_data[0][1].date.split('T')[0])
             for (var i = 0; i < Object.keys(G_data[0]).length; i++) {
@@ -67,10 +112,28 @@ export default class G_YearPerUnit extends React.Component {
 
         return (
             <div >
-                {this.state.loading || !this.state.dataGraph ?
-                    <div>
-                        <p > loading ...</p>
-                    </div> :
+
+                {!this.state.success ?
+                    (
+                       this.state.errorMessage == null ?
+                        (<div style={{ display: "flex" }}>
+                            {this.state.loading ?
+                                <Lottie options={defaultLoading} height={140} width={140} /> :
+                                <Lottie options={defaultSuccess} height={140} width={140} />
+                            }
+                        </div>):
+                        (
+                            <div style ={{textAlign: 'center'}}>
+                            <h1>SORRY!</h1>
+                            <p >Server down</p>
+                            <p>Please contact (kantawit sakhet 082-8834901 )</p>
+                            </div>
+                        )
+
+                        
+
+
+                    ) :
                     <div>
                         <CanvasJSChart options={options}
                     /* onRef={refÎ => this.chart = ref} */ />
