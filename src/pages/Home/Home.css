@@ -1,0 +1,24 @@
+.container-home{
+    padding: 3%;
+    background-image: url(../../image/home-bg.jpeg);
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* color: black */
+    
+}
+
+.text-home{
+    color: black;
+    font-size: 60px;
+    text-align: end;
+    font-weight: bold;
+}
+
+.text-quote{
+    color: black;
+    font-size: 20px;
+    text-align: end;
+    font-weight: bold;
+}

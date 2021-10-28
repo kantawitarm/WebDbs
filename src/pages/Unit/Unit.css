@@ -1,0 +1,80 @@
+.container-unit{
+    margin-top: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding-bottom: 3%;
+    /* margin: 3%;    < -- มี margin botton ด้วย ทำให้ ตอนเลื่อน เกินจอ*/
+}
+
+.row-outer-unit{
+    /* display: table; */
+    overflow:auto;
+    /* background-color:goldenrod; */
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    margin: 5%;
+    /* display:flex; */
+  /* justify-content:space-between; */
+
+} 
+
+.row-inner-unit{
+    /* display:table-cell; */
+    float:left;
+}
+
+/* .row-unit>* {
+    flex: 1 1 160px;
+} */
+
+.image-unit{
+    /* background-color: aqua; */
+    /* margin: 5px; */
+    margin-left: 15%;
+    /* margin-top:5% */
+
+}
+
+.container-DetailPic-unit{
+    margin-top: 5%;
+    /* background-color: green; */
+    float:right;
+    width: 400;
+    height: 400;
+    /* position: left; */
+
+    /* display:table-cell; */
+    /* text-align: center; */
+    /* margin-left: 8% */
+    /* top: 0; */
+    /* margin-left: 100px; */
+}
+
+
+
+/**/
+/* #777 */
+.collapsible {
+    background-color: rgb(223, 223, 223);
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+  }
+  
+  /* #555 */
+  .active, .collapsible:hover {
+    background-color: rgb(223, 223, 223);
+  }
+  
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: rgb(251, 247, 237);
+  }

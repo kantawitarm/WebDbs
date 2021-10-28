@@ -1,3 +1,36 @@
+# Trick ต่างๆ
+shortcut และอื่นๆ [https://code.visualstudio.com/docs/editor/codebasics]
+ข้อมูลตกแต่ง reatjs+ bootstrap[https://react-bootstrap.netlify.app/components/buttons/?#buttons]
+เอาข้อมูลที่ไม่ใช้ ออก $ rm src/logo.svg src/App.test.js
+สร้างใหม่ ใช้ ley ลัด rafce
+format [On Mac] Shift + Option + F, [On Windows] Shift + Alt + F
+
+key ลัดสร้างโครง พื้นฐาน => rafce
+# การimport เพิ่มเติม
+เพิ่ม lib canvasjs สำหรับตารางใน src/lib [https://canvasjs.com/docs/charts/integration/react/]
+
+npm install -S react-router-bootstrap
+
+npm install react-bootstrap-table-next --save
+
+npm i autocomplete
+npm install @material-ui/lab
+npm install @material-ui/core
+
+ตกแต่ง
+npm i react-lottie
+
+
+---- สำหรับ table ------
+npm install react-bootstrap-table-next --save 
+npm install react-bootstrap-table2-paginator --save
+npm install react-bootstrap-table2-filter --save
+
+
+
+
+### ======================================================================================================
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
