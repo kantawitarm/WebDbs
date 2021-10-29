@@ -45,7 +45,7 @@ export default class G_YearPerUnit extends React.Component {
 
     async componentDidMount() {
 
-        fetch("http://34.132.168.173/graph_back")
+        fetch("http://34.132.168.173/api/graph_back")
         .then(async response => {
             const data = await response.json();
             this.setState({loading:false})
