@@ -23,7 +23,6 @@ export default class Graph extends React.Component{
                 <div>
                     <Piechart/>
                 </div>
-    
                 {/* <div className="d-flex flex-row">
                         <div className="p-2"> <Graphs/> </div>
                         <div className="p-2"> <Graphs/> </div>
