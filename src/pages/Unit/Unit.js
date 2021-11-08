@@ -43,7 +43,7 @@ const Unit = ({ match }) => {
     useEffect(() => {
         // console.log(match.params.id)
         // fetchProduct();
-        fetch("http://http://159.223.77.8:3000/api/unit_back/" + match.params.id)//("http://34.132.168.173/api/unit_back/" + match.params.id)
+        fetch("http://159.223.77.8:4000/api/unit_back/" + match.params.id)//("http://34.132.168.173/api/unit_back/" + match.params.id)
         .then(async response => {
             const data = await response.json();
             // this.setState({loading:false})

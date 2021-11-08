@@ -44,7 +44,7 @@ export default class Piechart extends React.Component {
 
     async componentDidMount() {
 
-        fetch("http://http://159.223.77.8:3000/api/piechart_back")//("http://34.132.168.173/api/piechart_back")
+        fetch("http://159.223.77.8:4000/api/piechart_back")//("http://34.132.168.173/api/piechart_back")
         .then(async response => {
             const data = await response.json();
             this.setState({loading:false})

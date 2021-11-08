@@ -63,7 +63,7 @@ export default class Table extends React.Component {
 
     async componentDidMount() {
 
-        fetch("http://http://159.223.77.8:3000/api/table_back")//("http://34.132.168.173/api/table_back") //
+        fetch("http://159.223.77.8:4000/api/table_back")//("http://34.132.168.173/api/table_back") //
         .then(async response => {
             const data = await response.json();
             this.setState({loading:false})
